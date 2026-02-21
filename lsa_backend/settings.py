@@ -33,9 +33,13 @@ SECRET_KEY = 'django-insecure-v7$%#9px$39z^q2^-#4bq-p^2nou3=sm09+f22mit=5bxj2k8#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-
+CORS_ALLOW_CREDENTIALS = True
+# In development, allow any origin so CORS never blocks (django-cors-headers reflects request Origin).
+# For production, set DEBUG=False and use only CORS_ALLOWED_ORIGINS.
+if DEBUG:
+    CORS_ALLOW_ALL_ORIGINS = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'ls_backend',
     'rest_framework',
 ]
@@ -75,6 +80,7 @@ SIMPLE_JWT = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -84,7 +90,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ls_backend.urls'
+# Used when DEBUG is False (production). When DEBUG is True, CORS_ALLOW_ALL_ORIGINS is used instead.
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://10.0.0.36:3000",
+]
+_extra = os.environ.get("CORS_EXTRA_ORIGINS", "")
+if _extra:
+    CORS_ALLOWED_ORIGINS += [o.strip() for o in _extra.split(",") if o.strip()]
+
+
+ROOT_URLCONF = 'lsa_backend.urls'
 
 
 LOGGING = {
@@ -136,7 +153,7 @@ WSGI_APPLICATION = 'lsa_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': env('db_name'),
         'USER':env('db_user'),
         'PASSWORD':env('db_password'),

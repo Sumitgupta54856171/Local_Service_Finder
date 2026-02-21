@@ -16,24 +16,34 @@ class UserViewSet(viewsets.ModelViewSet):
 
     def auth(self, request, *args, **kwargs):
         try:
+            print(request.data)
             email = request.data.get('email')
             password = request.data.get('password')
             if email and password:
-                user = User.objects.get(email=email)
-                if user.check_password(password):
-                    refresh = RefreshToken.for_user(email)
-                    return Response({"user":UserSerializer(user).data},status=status.HTTP_200_OK)
+                try:
+                    user = User.objects.get(email=email)
+                except User.DoesNotExist:
+                    return Response({"error": "User does not exist"}, status=status.HTTP_400_BAD_REQUEST)
+                
+                from django.contrib.auth.hashers import check_password
+                if check_password(password, user.password):
+                    refresh = RefreshToken.for_user(user)
+                    return Response({
+                        "user": UserSerializer(user).data,
+                        "refresh": str(refresh),
+                        "access": str(refresh.access_token),
+                    }, status=status.HTTP_200_OK)
                 else:
-                    return Response({"error":"Invalid password"},status=status.HTTP_400_BAD_REQUEST)
+                    return Response({"error": "Invalid password"}, status=status.HTTP_400_BAD_REQUEST)
             else:
-                return Response({"error":"Invalid email and password"},status=status.HTTP_400_BAD_REQUEST)
+                return Response({"error": "Invalid email and password"}, status=status.HTTP_400_BAD_REQUEST)
 
         except DataError as e:
-            return Response({"error":e.args[0]},status=status.HTTP_400_BAD_REQUEST)
+            return Response({"error": e.args[0]}, status=status.HTTP_400_BAD_REQUEST)
         except ValueError as e:
-            return Response({"error":e.args[0]},status=status.HTTP_400_BAD_REQUEST)
+            return Response({"error": e.args[0]}, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
-            return exception_handler.custom_exception_handler(e,self)
+            return exception_handler.custom_exception_handler(e, self)
 
 
 
