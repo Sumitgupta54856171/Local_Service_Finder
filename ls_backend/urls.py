@@ -1,3 +1,5 @@
+from os import name
+
 from django.urls import path,include
 from .views import UserViewSet, LoginView
 from rest_framework.routers import DefaultRouter
@@ -22,8 +24,7 @@ schema_view = get_schema_view(
 )
 
 router = DefaultRouter()
-router.register('users',UserViewSet,basename='users')
-router.register('service', ServiceViewSet, basename='service')
+
 router.register('public',   PublicServiceViewSet  , basename='publicservice')
 
 
