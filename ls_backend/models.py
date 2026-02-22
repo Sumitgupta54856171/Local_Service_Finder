@@ -6,11 +6,11 @@ class User(models.Model):
           ('admin', 'Admin'),
           ('public', 'Public'),
      )
-     username = models.CharField(max_length=250,unique=True)
+     username = models.CharField(max_length=250)
      email = models.CharField(max_length=250,unique=True)
      password = models.CharField(max_length=100)
      role = models.CharField(max_length=100,choices=ROLE_CHOICES,default="public")
-     crerated_at = models.DateTimeField(auto_now_add=True)
+     created_at = models.DateTimeField(auto_now_add=True)
 
      def save(self, *args, **kwargs):
           # Password hashing industry standard hai
@@ -35,7 +35,7 @@ class Servicer(models.Model):
 
      name = models.CharField(max_length=255)
      category = models.CharField(max_length=100,choices=CATEGORY_CHOICES)
-     location = models.PointField(null=True, blank=True)
+     location = models.PointField(null=True, blank=True,geography=True,spatial_index=True)
      rating = models.FloatField(null=True, blank=True)
      created_at = models.DateTimeField(auto_now_add=True)
      class Meta:

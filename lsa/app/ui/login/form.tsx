@@ -40,11 +40,12 @@ export function LoginForm({
     validationSchema,
     onSubmit: async (values) => {
       const response = await postAuthServices(values);
-      if (response.success && response.access_token && response.refresh_token) {
-        await setAuthCookies(response.access_token, response.refresh_token);
-        window.location.href = "/admin/dashboard";
+      if (response) {
+        console.log("response", response);
+        await setAuthCookies(response.access, response.refresh);
+        window.location.href="/admin/dashboard"
       } else {
-        alert(response.message ?? "Login failed");
+        alert(response.error_message ?? "Login failed");
       }
     },
   })

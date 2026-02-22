@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "ulimit -n 65536 2>/dev/null; next dev --webpack",
+    "dev": "bash scripts/dev.sh",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -22,6 +22,7 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-leaflet": "^5.0.0",
+    "react-resizable-panels": "^4.6.5",
     "tailwind-merge": "^3.5.0",
     "yup": "^1.7.1"
   },

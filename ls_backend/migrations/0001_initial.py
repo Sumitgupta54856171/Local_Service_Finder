@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
                 ('username', models.CharField(max_length=250)),
                 ('email', models.CharField(max_length=250)),
                 ('password', models.CharField(max_length=100)),
-                ('crerated_at', models.DateTimeField(auto_now_add=True)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
             ],
         ),
     ]
