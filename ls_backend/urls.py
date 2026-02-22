@@ -1,11 +1,24 @@
 from django.urls import path,include
-from .views import UserViewSet
+from .views import UserViewSet, LoginView
 from rest_framework.routers import DefaultRouter
 from .ServiceView import ServiceViewSet
 from .Publicview import PublicServiceViewSet
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
 from rest_framework_simplejwt.views import (
     token_obtain_pair,
     TokenRefreshView,
+)
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Service API",
+        default_version='v1',
+        description="Service Management API Documentation",
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny,),
 )
 
 router = DefaultRouter()
@@ -15,10 +28,11 @@ router.register('public',   PublicServiceViewSet  , basename='publicservice')
 
 
 urlpatterns = [
-    path('api/login', UserViewSet.as_view({'post':'auth'}),name='login'),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('api/login', LoginView.as_view(),name='login'),
     path('api/service/delete/<int:id>',ServiceViewSet.as_view({'delete':'delete'}),name='servicedelete'),
     path('api/service/bulkupload', ServiceViewSet.as_view({'post': 'bulkupload'}), name='servicebulkupload'),
-    path('api/public/search/nearby',PublicServiceViewSet.as_view({"get":"list"}),name='nearbyservice'),
     path('api/public', PublicServiceViewSet.as_view({'get':'list'}),name='publicservice'),
     path('api/public/<int:limit>/<int:skip>',PublicServiceViewSet.as_view({'get':'limited_list'}),name='publicservice'),
     path('api/service/<int:limit>/<int:skip>',ServiceViewSet.as_view({'get':'limited_list'}),name='service'),

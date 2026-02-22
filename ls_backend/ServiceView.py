@@ -1,8 +1,7 @@
 
 from django.db import DataError
 from rest_framework import viewsets, status
-from rest_framework.decorators import permission_classes
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.views import APIView
 
 from .models import Servicer
 from .serriialiiizers import ServicerSerializer
@@ -11,9 +10,11 @@ from rest_framework.response import Response
 from django.contrib.gis.geos import Point
 import csv
 from rest_framework.permissions import IsAuthenticated
+from .utils.authentication import CookieJWTAuthentication
 
 
-class ServiceViewSet(viewsets.ModelViewSet):
+class ServiceViewSet(viewsets.ViewSet):
+    authentication_classes = [CookieJWTAuthentication]
     permission_classes = [IsAuthenticated]
     queryset = Servicer.objects.all()
     serializer_class = ServicerSerializer
@@ -98,6 +99,11 @@ class ServiceViewSet(viewsets.ModelViewSet):
 
         except Exception as e:
             return exception_handler.custom_exception_handler(e, self)
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
 
     def limited_list(self, request, *args, **kwargs):
         limit = request.query_params.get('limit') or kwargs.get('limit') or 10

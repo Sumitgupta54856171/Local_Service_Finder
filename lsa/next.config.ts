@@ -3,12 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async rewrites() {
     return [
-      {
-        // Sabhi /api-backend/ wali requests ko pakdo
-        source: "/api-backend/:path*",
-        // Aur unhe Django (127.0.0.1) par bhej do
-        destination: "http://localhost:8000/:path*",
-      },
+      // Proxy API calls to Django backend so the browser makes same-origin requests (no CORS).
+      { source: "/api-backend/:path*", destination: "http://localhost:8000/:path*" },
     ];
   },
   webpack(config, { dev }) {

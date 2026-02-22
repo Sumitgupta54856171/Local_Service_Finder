@@ -10,13 +10,16 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 
 
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
 
-    def auth(self, request, *args, **kwargs):
+class LoginView(APIView):
+    authentication_classes = []
+    permission_classes = []
+
+
+    def post(self, request):
         try:
-            print(request.data)
             email = request.data.get('email')
             password = request.data.get('password')
             if email and password:
@@ -30,20 +33,19 @@ class UserViewSet(viewsets.ModelViewSet):
                     refresh = RefreshToken.for_user(user)
                     return Response({
                         "user": UserSerializer(user).data,
-                        "refresh": str(refresh),
                         "access": str(refresh.access_token),
                     }, status=status.HTTP_200_OK)
                 else:
                     return Response({"error": "Invalid password"}, status=status.HTTP_400_BAD_REQUEST)
             else:
                 return Response({"error": "Invalid email and password"}, status=status.HTTP_400_BAD_REQUEST)
-
-        except DataError as e:
-            return Response({"error": e.args[0]}, status=status.HTTP_400_BAD_REQUEST)
-        except ValueError as e:
-            return Response({"error": e.args[0]}, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return exception_handler.custom_exception_handler(e, self)
+
+class UserViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 
 

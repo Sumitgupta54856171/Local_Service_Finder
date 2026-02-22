@@ -12,6 +12,10 @@ class User(models.Model):
      role = models.CharField(max_length=100,choices=ROLE_CHOICES,default="public")
      created_at = models.DateTimeField(auto_now_add=True)
 
+     @property
+     def is_authenticated(self):
+         return True
+
      def save(self, *args, **kwargs):
           # Password hashing industry standard hai
           from django.contrib.auth.hashers import identify_hasher

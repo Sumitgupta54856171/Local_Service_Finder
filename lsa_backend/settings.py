@@ -57,7 +57,6 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-        'ls_backend.utils.authentication.CookieJWTAuthentication',
     ),
     'EXCEPTION_HANDLER': 'ls_backend.utils.exception_handler.custom_exception_handler',
     'DEFAULT_THROTTLE_CLASSES': [
@@ -65,12 +64,9 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.AnonRateThrottle',
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'user': '100/minute',
-        'anon': '50/minute',
-        'public_api': '30/minute',
-    },
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 200,
+        'user': '10/minute',
+        'anon': '5/minute',
+    }
 }
 
 SIMPLE_JWT = {
@@ -104,8 +100,7 @@ _extra = os.environ.get("CORS_EXTRA_ORIGINS", "")
 if _extra:
     CORS_ALLOWED_ORIGINS += [o.strip() for o in _extra.split(",") if o.strip()]
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+
 ROOT_URLCONF = 'lsa_backend.urls'
 
 
@@ -120,7 +115,7 @@ LOGGING = {
     },
     'handlers': {
         'file': {
-            'level': 'DEBUG',
+            'level': 'ERROR', # Sirf errors save honge
             'class': 'logging.FileHandler',
             'filename': 'debug.log',
             'formatter': 'verbose',
@@ -203,10 +198,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'unique-snowflake',
-    }
-}
