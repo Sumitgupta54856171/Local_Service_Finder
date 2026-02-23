@@ -23,31 +23,13 @@ interface Service {
   rating: number;
 }
 
-export default function LandingMap() {
-  const [services, setServices] = useState<Service[]>([]);
-  const [loading, setLoading] = useState(true);
+export default function LandingMap({data,loading}) {
+  const services = data;
+
   const mapRef = useRef<L.Map | null>(null); // To access map instance later
 
   // Fetch via public-api (uses Next.js proxy in browser – no CORS).
-  useEffect(() => {
-    const fetchdata = async () => {
-      try {
-        setLoading(true);
-        const data = await getPublicServices();
-        const list = Array.isArray(data) ? data : data?.results ?? [];
-        const withLocation = list.filter(
-          (s: Service) => s?.location?.coordinates?.length === 2
-        );
-        setServices(withLocation);
-      } catch (error) {
-        console.error("Public services fetch error:", error);
-        setServices([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchdata();
-  }, []);
+
 
   // Auto-fit map to all markers once services load and map is ready
   const FitToMarkers = () => {
@@ -59,7 +41,7 @@ export default function LandingMap() {
 
       const bounds = L.latLngBounds([]); // Empty bounds
 
-      services.forEach((service) => {
+      Array.isArray(services)&&services.forEach((service) => {
         const [lng, lat] = service.location.coordinates;
         bounds.extend([lat, lng]); // Leaflet: [lat, lng]
       });
@@ -111,7 +93,7 @@ export default function LandingMap() {
 
         <FitToMarkers />
 
-        {services.map((service, index) => {
+        {Array.isArray(services)&&services.map((service, index) => {
           const [lng, lat] = service.location.coordinates;
           const position: [number, number] = [lat, lng]; // Leaflet order
 
@@ -126,18 +108,6 @@ export default function LandingMap() {
           );
         })}
       </MapContainer>
-
-      {/* Optional list */}
-      <div style={{ marginTop: "20px" }}>
-        <h2>Services Found: {services.length}</h2>
-        <ul>
-          {services.map((s, i) => (
-            <li key={i}>
-              {s.name} ({s.category}) – Rating: {s.rating}
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 }

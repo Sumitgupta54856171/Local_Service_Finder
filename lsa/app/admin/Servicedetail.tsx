@@ -64,6 +64,7 @@ export default function ServiceDetailTable() {
   // Handle Update Action (Mock)
   const handleUpdate = (id) => {
     console.log(`Navigating to update page for service ID: ${id}`);
+    window.location.href = `/admin/admin/update/service/${id}`;
     alert(`Update button clicked for Service ID: ${id}\n(Normally this would route to the Update Page you created)`);
   };
 
@@ -90,7 +91,7 @@ export default function ServiceDetailTable() {
           </button>
           <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg font-semibold text-sm transition-colors shadow-sm shadow-blue-500/20">
             <Plus className="h-4 w-4" />
-            <Link href="/admin/bulkupload/service">Bulk Upload</Link>
+            <Link href="/admin/dashboard/bulkupload/service">Bulk Upload</Link>
           </button>
         </div>
 

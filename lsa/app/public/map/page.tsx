@@ -4,7 +4,7 @@ import {
     ResizablePanelGroup,
   } from "@/components/ui/resizable"
   
-  export function ResizableVertical() {
+  export default function ResizableVertical() {
     return (
       <ResizablePanelGroup
         orientation="vertical"
