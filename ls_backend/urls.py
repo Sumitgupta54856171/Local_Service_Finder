@@ -39,6 +39,7 @@ urlpatterns = [
     path('api/service/<int:limit>/<int:skip>',ServiceViewSet.as_view({'get':'limited_list'}),name='service'),
     path('api/service',ServiceViewSet.as_view({'get':'list'}),name='service'),
     path('api/public/<int:id>',PublicServiceViewSet.as_view({'get':'detailpage'}),name='servicedetail'),
+    path('api/public/search/nearby',PublicServiceViewSet.as_view({'get':'get_queryset'}),name='publicservicesearch'),
     path('api/service/update/<int:pk>',ServiceViewSet.as_view({'put':'update'}),name='serviceupdate'),
     path('api/service/create',ServiceViewSet.as_view({'post':'create'}),name='servicecreate'),
     path('api/service/bulkupload', ServiceViewSet.as_view({'post': 'bulkupload'}), name='servicebulkupload'),

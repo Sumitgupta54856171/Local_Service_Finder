@@ -37,7 +37,7 @@ export default function LandingMap({data,loading}) {
     mapRef.current = map; // Save ref if needed later
 
     useEffect(() => {
-      if (services.length === 0 || !map) return;
+      if (Array.isArray(services) && services.length === 0 || !map) return;
 
       const bounds = L.latLngBounds([]); // Empty bounds
 
@@ -66,7 +66,7 @@ export default function LandingMap({data,loading}) {
     </div>;
   }
 
-  if (services.length === 0) {
+  if (Array.isArray(services) && services.length === 0) {
     return (
       <div>
         <h1>Service Finder Map</h1>

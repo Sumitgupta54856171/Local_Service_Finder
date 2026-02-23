@@ -68,6 +68,7 @@ export default function NearbyServiceMap() {
     setServices([]);
     try {
       const response = await axios.get(`http://localhost:8000/api/public/search/nearby?lat=${lat}&lng=${lng}&radius=${radius}&category=${category}`, { withCredentials: true });
+      console.log("API Response:", response.data);
       // Map backend response to Service[]
       const features: Service[] = (response.data.results || []).map((item: any) => ({
         id: item.id.toString(),

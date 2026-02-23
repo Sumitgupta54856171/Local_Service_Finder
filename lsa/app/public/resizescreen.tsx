@@ -50,7 +50,7 @@ const fetchData = async () => {
 
     fetchData();
 
-    return () => controller.abort(); // Cleanup function
+    
   }, []);
 
   return (
