@@ -19,6 +19,7 @@ import { useFormik } from "formik"
 import * as Yup from "yup"
 import { postAuthServices } from "@/app/api/admin-api";
 import { setAuthCookies } from "@/app/login/actions";
+import axios from "axios";
 
 const validationSchema = Yup.object({
   email: Yup.string()
@@ -39,11 +40,13 @@ export function LoginForm({
     initialValues: { email: "", password: "" },
     validationSchema,
     onSubmit: async (values) => {
-      const response = await postAuthServices(values);
+      console.log(values)
+      const response = await axios.post("http://localhost:8000/api/login/",values,{withCredentials:true})
       if (response) {
         console.log("response", response);
-        await setAuthCookies(response.access, response.refresh);
-        window.location.href="/admin/dashboard"
+        await setAuthCookies(response.data.access, response.data.refresh);
+        window.location.href = "/admin/dashboard/";
+        
       } else {
         alert(response.error_message ?? "Login failed");
       }

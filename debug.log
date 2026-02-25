@@ -1753,3 +1753,848 @@ Traceback (most recent call last):
            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'django.db.models.query.QuerySet'>`
 ERROR 2026-02-23 15:22:00,074 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=500&category=atm%20 HTTP/1.1" 500 84676
+ERROR 2026-02-24 17:14:07,376 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:14:07,378 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:14:14,602 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:14:14,603 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:14:44,063 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:14:44,064 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:14:49,459 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:14:49,459 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:15:54,366 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:15:54,366 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:16:18,599 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 17:16:18,600 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=5000&category=atm HTTP/1.1" 500 52
+ERROR 2026-02-24 17:16:28,117 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:16:28,118 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:16:28,121 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:16:28,121 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:16:32,078 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:16:32,079 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:17:43,507 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 17:17:43,507 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=500&category=atm%20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:18:36,007 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:18:36,007 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:18:37,768 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:18:37,769 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:18:38,806 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:18:38,807 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:19:03,466 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:19:03,466 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:19:11,677 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:19:11,678 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:19:12,836 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:19:12,837 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:19:14,238 log Internal Server Error: /api/public/10/20
+ERROR 2026-02-24 17:19:14,238 log "GET /api/public/10/20 HTTP/1.1" 500 52
+ERROR 2026-02-24 17:24:55,764 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:24:55,765 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:11,373 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:11,373 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:41,955 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:41,956 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:41,987 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:41,987 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:43,423 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:43,423 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:43,683 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:43,683 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:43,896 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:43,897 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:44,097 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:44,097 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:44,294 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:44,294 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:44,487 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:44,487 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:44,667 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:44,667 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:44,873 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:44,874 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:45,067 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:45,068 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:25:47,176 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:25:47,176 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:28:53,181 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:28:53,182 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:28:54,779 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:28:54,779 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:28:55,173 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:28:55,174 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:28:55,378 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:28:55,378 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:28:55,579 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:28:55,580 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:28:55,829 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:28:55,830 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:28:56,008 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:28:56,009 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:28:56,238 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:28:56,239 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:28:57,772 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:28:57,772 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:17,664 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:17,665 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:19,166 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:19,167 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:19,392 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:19,392 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:19,586 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:19,586 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:19,772 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:19,772 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:19,981 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:19,981 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:20,186 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:20,187 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:22,016 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:22,016 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:30,078 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:30,078 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:30,593 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:30,594 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:30,916 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:30,917 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:33:32,395 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:33:32,396 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:36:37,407 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:36:37,408 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:36:38,304 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:36:38,304 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:36:38,506 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:36:38,506 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:36:48,582 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:36:48,582 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:36:49,521 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:36:49,521 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:36:50,001 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:36:50,001 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:36:50,205 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:36:50,206 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:37:08,645 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:37:08,645 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:37:16,999 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:37:16,999 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:38:50,833 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:38:50,833 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:38:52,028 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:38:52,028 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:38:55,414 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:38:55,415 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:38:59,554 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:38:59,555 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:39:04,842 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:39:04,842 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:41:32,105 log Internal Server Error: /api/public/10/
+ERROR 2026-02-24 17:41:32,105 log "GET /api/public/10/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:41:33,130 log Internal Server Error: /api/public/10/
+ERROR 2026-02-24 17:41:33,130 log "GET /api/public/10/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:41:34,002 log Internal Server Error: /api/public/10/
+ERROR 2026-02-24 17:41:34,002 log "GET /api/public/10/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:43:27,489 log Internal Server Error: /api/public/10/
+ERROR 2026-02-24 17:43:27,489 log "GET /api/public/10/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:43:29,141 log Internal Server Error: /api/public/10/
+ERROR 2026-02-24 17:43:29,141 log "GET /api/public/10/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:43:47,590 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:43:47,590 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:44:23,657 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:44:23,658 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:44:24,723 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:44:24,724 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:44:36,059 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:44:36,059 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:44:56,058 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:44:56,058 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:45:36,668 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:45:36,669 log "GET /api/public/10/20/ HTTP/1.1" 500 52
+ERROR 2026-02-24 17:47:09,405 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:47:09,405 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:48:12,323 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:48:12,323 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:48:15,816 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:48:15,816 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:48:17,176 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:48:17,176 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:50:04,646 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:50:04,647 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:51:31,355 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:51:31,356 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:51:32,961 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:51:32,962 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:54:48,100 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:54:48,100 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:54:49,240 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:54:49,240 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:54:49,847 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:54:49,847 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:54:53,502 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:54:53,502 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:55:26,395 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:55:26,395 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:55:27,597 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:55:27,598 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:55:28,421 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:55:28,422 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:56:02,929 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:56:02,930 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:56:03,565 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:56:03,565 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:56:05,678 log Internal Server Error: /swagger/
+ERROR 2026-02-24 17:56:05,678 log "GET /swagger/ HTTP/1.1" 500 25
+ERROR 2026-02-24 17:57:46,755 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:57:46,756 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:57:49,063 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:57:49,063 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 17:57:50,440 log Internal Server Error: /api/public/10/20/
+ERROR 2026-02-24 17:57:50,441 log "GET /api/public/10/20/ HTTP/1.1" 500 97
+ERROR 2026-02-24 18:02:06,324 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:02:06,325 log "GET /swagger/ HTTP/1.1" 500 100843
+ERROR 2026-02-24 18:02:08,360 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:02:08,361 log "GET /swagger/ HTTP/1.1" 500 100843
+ERROR 2026-02-24 18:02:09,251 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:02:09,252 log "GET /swagger/ HTTP/1.1" 500 100843
+ERROR 2026-02-24 18:02:09,454 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:02:09,455 log "GET /swagger/ HTTP/1.1" 500 100843
+ERROR 2026-02-24 18:03:38,550 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:03:38,552 log "GET /swagger/ HTTP/1.1" 500 100712
+ERROR 2026-02-24 18:03:48,854 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:03:48,855 log "GET /swagger/ HTTP/1.1" 500 100712
+ERROR 2026-02-24 18:03:55,803 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:03:55,803 log "GET /swagger/ HTTP/1.1" 500 100849
+ERROR 2026-02-24 18:03:56,642 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:03:56,643 log "GET /swagger/ HTTP/1.1" 500 100849
+ERROR 2026-02-24 18:03:56,846 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:03:56,847 log "GET /swagger/ HTTP/1.1" 500 100849
+ERROR 2026-02-24 18:05:16,925 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:05:16,926 log "GET /swagger/ HTTP/1.1" 500 100706
+ERROR 2026-02-24 18:05:20,794 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:05:20,795 log "GET /swagger/ HTTP/1.1" 500 100706
+ERROR 2026-02-24 18:05:27,033 log Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2026-02-24 18:05:27,034 log "GET /swagger/ HTTP/1.1" 500 100849
+ERROR 2026-02-24 18:05:38,248 log Internal Server Error: /redoc/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/drf_yasg/renderers.py", line 93, in render
+    return render_to_string(
+        self.template, renderer_context, renderer_context["request"]
+    )
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/redoc.html
+ERROR 2026-02-24 18:05:38,249 log "GET /redoc/ HTTP/1.1" 500 98639
+ERROR 2026-02-24 18:08:30,714 log Internal Server Error: /api/public/search/nearby/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'nearby'
+ERROR 2026-02-24 18:08:30,715 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 21231
+ERROR 2026-02-24 18:08:38,842 log Internal Server Error: /api/public/search/nearby/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'nearby'
+ERROR 2026-02-24 18:08:38,843 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 21231
+ERROR 2026-02-24 18:10:03,206 log Internal Server Error: /api/public/search/nearby/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'nearby'
+ERROR 2026-02-24 18:10:03,209 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 21231
+ERROR 2026-02-24 18:10:05,844 log Internal Server Error: /api/public/search/nearby/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'nearby'
+ERROR 2026-02-24 18:10:05,845 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 21231
+ERROR 2026-02-24 18:10:48,362 log Internal Server Error: /api/public/search/nearby/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'nearby'
+ERROR 2026-02-24 18:10:48,363 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=50&category=atm%20 HTTP/1.1" 500 79581
+ERROR 2026-02-24 18:11:18,910 log Internal Server Error: /api/public/search/nearby
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'nearby'
+ERROR 2026-02-24 18:11:18,911 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm%20 HTTP/1.1" 500 79570
+ERROR 2026-02-24 18:11:21,063 log Internal Server Error: /api/public/search/nearby
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'nearby'
+ERROR 2026-02-24 18:11:21,063 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm%20 HTTP/1.1" 500 79570
+ERROR 2026-02-24 18:13:29,453 log Internal Server Error: /api/public/search/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'search'
+ERROR 2026-02-24 18:13:29,454 log "GET /api/public/search/?lat=19.076&lng=72.8777&radius=50&category=atm%20 HTTP/1.1" 500 79504
+ERROR 2026-02-24 18:13:30,691 log Internal Server Error: /api/public/search/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'search'
+ERROR 2026-02-24 18:13:30,691 log "GET /api/public/search/?lat=19.076&lng=72.8777&radius=50&category=atm%20 HTTP/1.1" 500 79504
+ERROR 2026-02-24 18:13:31,467 log Internal Server Error: /api/public/search/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'search'
+ERROR 2026-02-24 18:13:31,467 log "GET /api/public/search/?lat=19.076&lng=72.8777&radius=50&category=atm%20 HTTP/1.1" 500 79504
+ERROR 2026-02-24 18:19:12,437 log Internal Server Error: /api/public/search/
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'PublicServiceViewSet' object has no attribute 'search'
+ERROR 2026-02-24 18:19:12,438 log "GET /api/public/search/?lat=19.076&lng=72.8777&radius=50&category=atm%20 HTTP/1.1" 500 79504
+ERROR 2026-02-24 18:20:13,245 log Internal Server Error: /api/public/search/
+ERROR 2026-02-24 18:20:13,245 log "GET /api/public/search/?lat=19.076&lng=72.8777&radius=50&category=atm%20 HTTP/1.1" 500 102
+ERROR 2026-02-24 18:20:57,306 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:20:57,307 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm%20 HTTP/1.1" 500 110
+ERROR 2026-02-24 18:23:32,455 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:23:32,456 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm%20 HTTP/1.1" 500 110
+ERROR 2026-02-24 18:23:48,566 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:23:48,566 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=%22atm%22 HTTP/1.1" 500 110
+ERROR 2026-02-24 18:24:05,436 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:24:05,436 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:26:32,611 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:26:32,612 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:26:33,921 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:26:33,921 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:27:24,938 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:27:24,938 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:27:27,654 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:27:27,655 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:28:21,239 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:28:21,239 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:28:31,303 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:28:31,303 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:28:33,115 log Internal Server Error: /api/public/search/nearby
+ERROR 2026-02-24 18:28:33,115 log "GET /api/public/search/nearby?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:29:01,312 log Internal Server Error: /api/public/search/nearby/
+ERROR 2026-02-24 18:29:01,312 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:29:04,354 log Internal Server Error: /api/public/search/nearby/
+ERROR 2026-02-24 18:29:04,355 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=50&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:30:36,961 log Internal Server Error: /api/public/search/nearby/
+ERROR 2026-02-24 18:30:36,961 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=5000&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:31:13,752 log Internal Server Error: /api/public/search/nearby/
+ERROR 2026-02-24 18:31:13,753 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=5000&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:31:19,149 log Internal Server Error: /api/public/search/nearby/
+ERROR 2026-02-24 18:31:19,150 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=5000&category=atm HTTP/1.1" 500 110
+ERROR 2026-02-24 18:32:03,102 log Internal Server Error: /api/public/search/nearby/
+ERROR 2026-02-24 18:32:03,102 log "GET /api/public/search/nearby/?lat=19.076&lng=72.8777&radius=5000&category=atm HTTP/1.1" 500 102
+ERROR 2026-02-25 02:21:03,349 log Internal Server Error: /api/service/create
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/service/create/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 02:21:03,351 log "POST /api/service/create HTTP/1.1" 500 21476
+ERROR 2026-02-25 02:23:37,435 log Internal Server Error: /api/service/create
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/service/create/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 02:23:37,436 log "POST /api/service/create HTTP/1.1" 500 21476
+ERROR 2026-02-25 02:25:24,192 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 02:25:24,193 log "POST /api/login HTTP/1.1" 500 21464
+ERROR 2026-02-25 02:32:29,994 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 02:32:29,995 log "POST /api/login HTTP/1.1" 500 21540
+ERROR 2026-02-25 02:36:44,481 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 02:36:44,483 log "POST /api/login HTTP/1.1" 500 21540
+ERROR 2026-02-25 02:37:58,788 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 02:37:58,789 log "POST /api/login HTTP/1.1" 500 21540
+ERROR 2026-02-25 02:41:30,448 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 02:41:30,449 log "POST /api/login HTTP/1.1" 500 21540
+ERROR 2026-02-25 02:44:48,801 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 02:44:48,802 log "POST /api/login HTTP/1.1" 500 21540
+ERROR 2026-02-25 02:55:13,985 log Internal Server Error: /api/login/
+ERROR 2026-02-25 02:55:13,985 log "POST /api/login/ HTTP/1.1" 500 146
+ERROR 2026-02-25 02:55:18,789 log Internal Server Error: /api/login/
+ERROR 2026-02-25 02:55:18,789 log "POST /api/login/ HTTP/1.1" 500 146
+ERROR 2026-02-25 03:36:30,813 log Internal Server Error: /api/service/create
+ERROR 2026-02-25 03:36:30,813 log "POST /api/service/create HTTP/1.1" 500 87
+ERROR 2026-02-25 03:36:33,732 log Internal Server Error: /api/service/create
+ERROR 2026-02-25 03:36:33,732 log "POST /api/service/create HTTP/1.1" 500 87
+ERROR 2026-02-25 03:37:52,443 log Internal Server Error: /api/service/create
+ERROR 2026-02-25 03:37:52,443 log "POST /api/service/create HTTP/1.1" 500 87
+ERROR 2026-02-25 03:41:16,837 log Internal Server Error: /api/service/bulkupload
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/service/bulkupload/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 03:41:16,838 log "POST /api/service/bulkupload HTTP/1.1" 500 21657
+ERROR 2026-02-25 03:42:17,702 log Internal Server Error: /api/service/bulkupload
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/service/bulkupload/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 03:42:17,704 log "POST /api/service/bulkupload HTTP/1.1" 500 21657
+ERROR 2026-02-25 03:42:21,511 log Internal Server Error: /api/service/bulkupload
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/service/bulkupload/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 03:42:21,512 log "POST /api/service/bulkupload HTTP/1.1" 500 21657
+ERROR 2026-02-25 03:42:23,086 log Internal Server Error: /api/service/bulkupload
+Traceback (most recent call last):
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/senior/myenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/service/bulkupload/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-25 03:42:23,087 log "POST /api/service/bulkupload HTTP/1.1" 500 21657
+ERROR 2026-02-25 03:57:42,518 log Internal Server Error: /api/service/update/124
+ERROR 2026-02-25 03:57:42,519 log "PUT /api/service/update/124 HTTP/1.1" 500 192
+ERROR 2026-02-25 03:57:52,380 log Internal Server Error: /api/service/update/124
+ERROR 2026-02-25 03:57:52,381 log "PUT /api/service/update/124 HTTP/1.1" 500 192
+ERROR 2026-02-25 03:58:23,237 log Internal Server Error: /api/service/update/124
+ERROR 2026-02-25 03:58:23,238 log "PUT /api/service/update/124 HTTP/1.1" 500 93
+ERROR 2026-02-25 03:59:12,093 log Internal Server Error: /api/service/update/124
+ERROR 2026-02-25 03:59:12,094 log "PUT /api/service/update/124 HTTP/1.1" 500 93
+ERROR 2026-02-25 03:59:46,358 log Internal Server Error: /api/service/update/124
+ERROR 2026-02-25 03:59:46,358 log "PUT /api/service/update/124 HTTP/1.1" 500 93
+ERROR 2026-02-25 04:00:02,399 log Internal Server Error: /api/service/update/124
+ERROR 2026-02-25 04:00:02,399 log "PUT /api/service/update/124 HTTP/1.1" 500 192
+ERROR 2026-02-25 04:00:31,965 log Internal Server Error: /api/service/update/124
+ERROR 2026-02-25 04:00:31,965 log "PUT /api/service/update/124 HTTP/1.1" 500 60
+ERROR 2026-02-25 04:07:33,297 log Internal Server Error: /api/service/update/124
+ERROR 2026-02-25 04:07:33,298 log "PUT /api/service/update/124 HTTP/1.1" 500 192
+ERROR 2026-02-25 04:09:34,687 log Internal Server Error: /api/service/update/124
+ERROR 2026-02-25 04:09:34,689 log "PUT /api/service/update/124 HTTP/1.1" 500 258
+ERROR 2026-02-25 04:17:18,411 log Internal Server Error: /api/service/delete/127
+ERROR 2026-02-25 04:17:18,412 log "DELETE /api/service/delete/127 HTTP/1.1" 500 192

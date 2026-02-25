@@ -70,14 +70,16 @@ export default function NearbyServiceMap() {
       const response = await axios.get(`http://localhost:8000/api/public/search/nearby?lat=${lat}&lng=${lng}&radius=${radius}&category=${category}`, { withCredentials: true });
       console.log("API Response:", response.data);
       // Map backend response to Service[]
-      const features: Service[] = (response.data.results || []).map((item: any) => ({
+      const features: Service[] = (response.data || []).map((item: any) => ({
         id: item.id.toString(),
-        lat: item.location?.coordinates?.[1], // GeoJSON: [lng, lat]
-        lon: item.location?.coordinates?.[0],
+        lat: item.location.coordinates[1],
+        lon: item.location.coordinates[0],
         name: item.name,
         category: item.category,
         rating: typeof item.rating === "number" ? item.rating : undefined,
       }));
+      console.log("Mapped Services:", features);
+
       if (features.length === 0) {
         setError("No services found for the given search.");
       } else {

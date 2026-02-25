@@ -80,7 +80,7 @@ fetchUpdateData();
         rating: parseFloat(values.rating),
       };
       setIsUpdated(true);
-      await axios.put(`http://localhost:8000/api/service/update/${id}`, payload);
+      await axios.put(`http://localhost:8000/api/service/update/${id}`, payload,{withCredentials:true});
       setTimeout(() => {
         setIsUpdated(false);
       }, 3000);

@@ -5,25 +5,28 @@ from django.db import DataError
 from django.shortcuts import render
 from rest_framework import viewsets, status
 from .models import User
-from .serriialiiizers import UserSerializer,ServicerSerializer
+from .serriialiiizers import UserSerializer
 from .utils import exception_handler
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework import viewsets
 
 
 
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 
-class LoginView(APIView):
-    authentication_classes = []
-    permission_classes = []
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 
-    def post(self, request):
+
+    def checkuser(self, request):
         try:
             email = request.data.get('email')
             password = request.data.get('password')
+            print(f"Login attempt with email: {email}")
             if email and password:
                 try:
                     user = User.objects.get(email=email)
@@ -34,11 +37,15 @@ class LoginView(APIView):
                 if check_password(password, user.password):
                     refresh = RefreshToken.for_user(user)
                     access_token = str(refresh.access_token)
+                   
                     refresh_token = str(refresh)
+                    print(refresh_token)
                     response = Response(
                         {
                             "user": UserSerializer(user).data,
-                            "message": "Login successful"
+                            "message": "Login successful",
+                            "access": access_token,
+                            "refresh": refresh_token
                         },
                         status=status.HTTP_200_OK
                     )
@@ -63,10 +70,12 @@ class LoginView(APIView):
                     return Response({
                         "user": UserSerializer(user).data,
                         "access": str(refresh.access_token),
+                        "refresh": str(refresh),
+                        "message": "Login successful"
                     }, status=status.HTTP_200_OK)
 
 
-
+                
                 else:
                     return Response({"error": "Invalid password"}, status=status.HTTP_400_BAD_REQUEST)
             else:
@@ -80,10 +89,6 @@ class LoginView(APIView):
         response.delete_cookie("refresh_token")
         return response
 
-class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
 
 
 

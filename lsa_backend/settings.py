@@ -14,8 +14,19 @@ from pathlib import Path
 from datetime import timedelta
 import environ
 import os
+from celery import Celery
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')
+
+app = Celery('myproject')
+
+app.config_from_object('django.conf:settings', namespace='CELERY')
+
+# Auto-discover tasks in all installed apps
+app.autodiscover_tasks()
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -57,6 +68,7 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'ls_backend.utils.authentication.CookieJWTAuthentication',  # ← added for cookie support
     ),
     'EXCEPTION_HANDLER': 'ls_backend.utils.exception_handler.custom_exception_handler',
     'DEFAULT_THROTTLE_CLASSES': [
@@ -68,6 +80,35 @@ REST_FRAMEWORK = {
         'anon': '5/minute',
     }
 }
+
+
+# myproject/settings.py
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            # Yahan CLIENT_CLASS update karna hai
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "PICKLE_VERSION": -1, 
+        },
+    },
+
+    "session_cache": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2", 
+        "OPTIONS": {
+            # Yahan bhi update karna hai
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+        "TIMEOUT": 60 * 60 * 24 * 7, 
+    }
+}
+
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "session_cache" 
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=180),

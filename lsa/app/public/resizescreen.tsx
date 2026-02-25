@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/resizable"
 import { use, useEffect,useState,Suspense,lazy } from "react"
 import axios from "axios"
-import { Data } from "@react-google-maps/api"
+
 
 import {SpinnerCustom} from "@/app/ui/loadingspin"
 
@@ -90,7 +90,7 @@ const fetchData = async () => {
               <div className="relative w-full h-full rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-100">
                 <Suspense fallback={
                   <div className="flex items-center justify-center h-full">
-                    <SpinnerCustom className="size-12 text-blue-600" />
+                    <SpinnerCustom className="size-50 text-blue-600" />
                   </div>
                 }>
                   <LandingMap data={services} loading={loading} />

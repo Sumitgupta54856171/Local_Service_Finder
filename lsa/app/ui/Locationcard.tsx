@@ -1,8 +1,8 @@
 import React from 'react';
-import { Star, Navigation, CornerUpRight } from 'lucide-react';
+import { Star, Navigation } from 'lucide-react';
 import Link from 'next/link';
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Separator } from "@/components/ui/separator"
+
 
 
 // Main Component jo aap apne actual code me use karoge

@@ -11,15 +11,15 @@ from django.contrib.gis.geos import Point
 import csv
 from rest_framework.permissions import IsAuthenticated
 from .utils.authentication import CookieJWTAuthentication
+from .permission import IsAdmin
 
 
-class ServiceViewSet(viewsets.ViewSet):
+class ServiceViewSet(viewsets.ModelViewSet):
     authentication_classes = [CookieJWTAuthentication]
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated,]
     queryset = Servicer.objects.all()
     serializer_class = ServicerSerializer
     def create(self, request, *args, **kwargs):
-
         try:
             print(request.data)
             serializer = self.get_serializer(data=request.data)
@@ -37,9 +37,13 @@ class ServiceViewSet(viewsets.ViewSet):
 
     def update(self, request, *args, **kwargs):
         try:
+            print(request.data)
             instance = self.get_object()
+            
             serializer = self.get_serializer(instance, data=request.data, partial=True)
+           
             if serializer.is_valid():
+                
                 self.perform_update(serializer)
                 return Response(serializer.data)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -57,7 +61,7 @@ class ServiceViewSet(viewsets.ViewSet):
     def bulkupload(self, request, *args, **kwargs):
         try:
             csv_file = request.FILES.get('file')
-            print(csv_file)
+            print("CSV File:", csv_file)
             if not csv_file:
                 return Response({"error": "No file uploaded"}, status=status.HTTP_400_BAD_REQUEST)
             
@@ -70,7 +74,7 @@ class ServiceViewSet(viewsets.ViewSet):
             services_to_create = []
             for row in reader:
                 try:
-                    # Expecting columns: name, category, latitude, longitude, rating
+                   
                     name = row.get('name')
                     category = row.get('category')
                     lat = row.get('latitude')
@@ -104,7 +108,8 @@ class ServiceViewSet(viewsets.ViewSet):
         queryset = self.filter_queryset(self.get_queryset())
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
-
+    
+ 
     def limited_list(self, request, *args, **kwargs):
         limit = request.query_params.get('limit') or kwargs.get('limit') or 10
         skip = request.query_params.get('skip') or kwargs.get('skip') or 0
@@ -124,7 +129,9 @@ class ServiceViewSet(viewsets.ViewSet):
     def searchbyname(self,request,*args,**kwargs):
         name = request.query_params.get('name') or kwargs.get('name')
         queryset = self.filter_queryset(self.get_queryset()).filter(name__icontains=name)
-        return queryset
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
+
 
 
     def delete(self,request,*args,**kwargs):
