@@ -16,7 +16,7 @@ from .permission import IsAdmin
 
 class ServiceViewSet(viewsets.ModelViewSet):
     authentication_classes = [CookieJWTAuthentication]
-    permission_classes = [IsAuthenticated,]
+    permission_classes = [IsAuthenticated,IsAdmin]
     queryset = Servicer.objects.all()
     serializer_class = ServicerSerializer
     def create(self, request, *args, **kwargs):

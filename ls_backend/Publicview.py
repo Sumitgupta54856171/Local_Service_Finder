@@ -7,12 +7,13 @@ from .serriialiiizers import ServicerSerializer
 from django.contrib.gis.db.models.functions import Distance
 from django.core.cache import cache
 from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
 
-
-class PublicServiceViewSet(viewsets.ModelViewSet):
+class PublicServiceViewSet(viewsets.ReadOnlyModelViewSet):
+ permission_classes = [AllowAny]
+ authentication_classes = []  # No authentication for public view
  queryset = Servicer.objects.all()
  serializer_class = ServicerSerializer
- 
 
 
  def get_queryset(self):
@@ -21,8 +22,6 @@ class PublicServiceViewSet(viewsets.ModelViewSet):
     
     queryset = Servicer.objects.all()
     request = self.request
-  
-
 
     # Get spatial and filter inputs from the request
     lat = request.query_params.get('lat')
@@ -34,11 +33,6 @@ class PublicServiceViewSet(viewsets.ModelViewSet):
     if category:
         queryset = queryset.filter(category__icontains=category)
 
-      
-
-
-
-    # GeoQuery Logic (Spatial Operations)
     if lat and lng and radius:
         try:
             # Create a spatial Point object (Longitude pehle, Latitude baad mein)
@@ -51,10 +45,6 @@ class PublicServiceViewSet(viewsets.ModelViewSet):
 
             # C) Sorting: Sabse pass wali service pehle dikhayein (Nearest distance)
             queryset = queryset.order_by('distance')
-
-            
-          
-
 
         except ValueError:
            pass
