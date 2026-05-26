@@ -126,13 +126,14 @@ This flowchart describes a typical user action: searching nearby services and se
 
 ```mermaid
 flowchart TD
-	Browser[Browser/User]
-	Frontend[Next.js Frontend]
-	Proxy[/api-backend Proxy]
-	Backend[Django REST API]
+	flowchart TD
+	Browser["Browser/User"]
+	Frontend["Next.js Frontend"]
+	Proxy["/api-backend Proxy"]
+	Backend["Django REST API"]
 	DB[(PostGIS DB)]
 	Cache[(Redis)]
-	Map[Map Renderer (Leaflet)]
+	Map["Map Renderer (Leaflet)"]
 
 	Browser -->|open search page| Frontend
 	Frontend -->|calls /api-backend/search/nearby| Proxy
