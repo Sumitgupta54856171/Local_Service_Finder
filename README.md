@@ -53,6 +53,101 @@ erDiagram
 
 ---
 
+## 🧩 Frontend ↔ Backend (ER-style) Diagram
+
+This diagram shows how frontend components interact with backend API entities and which backend resources they use.
+
+```mermaid
+erDiagram
+	FRONTEND_COMPONENTS {
+		varchar name
+		varchar purpose
+	}
+	BACKEND_API {
+		varchar endpoint
+		varchar method
+	}
+	SERVICER {
+		int id PK
+		varchar name
+	}
+	USER {
+		int id PK
+		varchar email
+	}
+
+	FRONTEND_COMPONENTS ||--o{ BACKEND_API : "calls"
+	BACKEND_API ||--|{ SERVICER : "reads/updates"
+	BACKEND_API ||--|{ USER : "authenticates"
+```
+
+*Notes:* frontend components (public pages, admin dashboard, map) call backend API endpoints. The backend API exposes `Servicer` and `User` resources used by those components.
+
+---
+
+## 🏗️ System Design (components) ER Diagram
+
+High-level components and their relationships (services, data stores, and external integrations).
+
+```mermaid
+erDiagram
+	BROWSER {
+		varchar client
+	}
+	NEXTJS_FRONTEND {
+		varchar app
+	}
+	DJANGO_BACKEND {
+		varchar api
+	}
+	POSTGIS_DB {
+		varchar datastore
+	}
+	REDIS {
+		varchar cache
+	}
+	DOCKER {
+		varchar orchestration
+	}
+
+	BROWSER ||--o{ NEXTJS_FRONTEND : "visits"
+	NEXTJS_FRONTEND ||--o{ DJANGO_BACKEND : "calls (proxy /api-backend)"
+	DJANGO_BACKEND ||--o{ POSTGIS_DB : "reads/writes geodata"
+	DJANGO_BACKEND ||--o{ REDIS : "caches / sessions"
+	DOCKER ||--o{ POSTGIS_DB : "runs"
+	DOCKER ||--o{ REDIS : "runs"
+```
+
+---
+
+## ⚙️ Application Workflow (sequence / flow)
+
+This flowchart describes a typical user action: searching nearby services and seeing results on the map.
+
+```mermaid
+flowchart TD
+	Browser[Browser/User]
+	Frontend[Next.js Frontend]
+	Proxy[/api-backend Proxy]
+	Backend[Django REST API]
+	DB[(PostGIS DB)]
+	Cache[(Redis)]
+	Map[Map Renderer (Leaflet)]
+
+	Browser -->|open search page| Frontend
+	Frontend -->|calls /api-backend/search/nearby| Proxy
+	Proxy --> Backend
+	Backend -->|spatial query| DB
+	Backend -->|optionally read/write| Cache
+	Backend --> Proxy
+	Proxy --> Frontend
+	Frontend -->|render results| Map
+
+	style Map fill:#f9f,stroke:#333,stroke-width:1px
+```
+
+---
+
 ## 🔎 Data Model Details
 
 - **User**: lightweight custom user model defined in `ls_backend/models.py`. Fields: `username`, `email (unique)`, `password` (hashed on save), `role` (admin or public), and `created_at`.
