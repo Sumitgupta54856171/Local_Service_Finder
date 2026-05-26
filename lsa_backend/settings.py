@@ -195,11 +195,11 @@ WSGI_APPLICATION = 'lsa_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': env('db_name'),
-        'USER':env('db_user'),
-        'PASSWORD':env('db_password'),
-        'HOST':env('db_host'),
-        'PORT':env('db_port'),
+        'NAME': 'local_service_db',
+        'USER': 'postgres_user',
+        'PASSWORD': '12345687',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -239,3 +239,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+CORS_ALLOW_CREDENTIALS = True
+
+# Development ke liye local testing mein inko active kar sakte hain
+SESSION_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_SAMESITE = 'Lax'

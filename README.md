@@ -1,108 +1,133 @@
 # 📍 Local Service Finder
 
-A professional, high-performance platform designed to help users find and manage local services efficiently. This project features a robust **Django REST Framework** backend with spatial capabilities and a modern **Next.js** frontend.
+Local Service Finder is a full-stack application for discovering, managing, and exploring local services using a spatially-enabled backend and a modern React frontend.
 
 ---
 
-## 🏗️ Project Structure
+## 📌 Project Overview
+
+This repository contains a Django REST API backend and a Next.js frontend that work together to provide:
+
+- Public search for local services.
+- Admin service management.
+- Location-based mapping with GeoDjango support.
+- JWT cookie authentication for secure access.
+
+---
+
+## 🌐 Architecture
+
+- `lsa_backend/` — Django project configuration, settings, apps, and routing.
+- `ls_backend/` — Django application containing models, serializers, views, authentication, and permission logic.
+- `lsa/` — Next.js frontend built with the App Router, map UI, admin dashboard, and public pages.
+- `docker-compose.yml` — local development containers for PostGIS and Redis.
+- `requirements.txt` — backend Python dependencies.
+
+---
+
+## 🚀 Key Features
+
+- **Geospatial services:** `Servicer` records include PointField locations for map-based search.
+- **Public API:** browse services, fetch details, and search nearby locations.
+- **Admin API:** create, update, and delete services using a dashboard.
+- **JWT cookies:** secure token-based session handling with `accessToken` and `refreshToken` cookies.
+- **Next.js proxy routing:** frontend uses `/api-backend/*` to avoid CORS in development.
+
+---
+
+## 🧰 Technology Stack
+
+### Backend
+- Django 6.0
+- Django REST Framework
+- Django REST Framework GIS
+- SimpleJWT
+- GeoDjango / PostGIS support
+- Redis
+
+### Frontend
+- Next.js 16+
+- React 19
+- Tailwind CSS
+- Formik + Yup
+- React Leaflet
+- Axios
+
+---
+
+## 📁 Directory Layout
 
 ```text
 Local_Service_Finder/
-├── 📂 lsa_backend/          # Django Project Configuration
-├── 📂 ls_backend/           # Django App (Business Logic, Models, Views)
-│   ├── 📂 utils/            # Helper functions & middleware
-│   ├── 📄 models.py         # Database schema
-│   └── 📄 views.py          # API Endpoints
-├── 📂 lsa/                   # Next.js Frontend (Primary)
-│   ├── 📂 app/              # App router & pages
-│   ├── 📂 components/       # Reusable UI components
-│   └── 📂 public/           # Static assets
-├── 📂 my-app/                # Secondary/Alternative Frontend
-├── 📄 docker-compose.yml    # ELK Stack (Elasticsearch, Logstash, Kibana)
-├── 📄 JENKINSFILE           # CI/CD Pipeline Configuration
-├── 📄 manage.py             # Django management script
-└── 📄 README.md             # Project documentation
+├── lsa_backend/         # Django project configuration
+├── ls_backend/          # Django app logic, models, views, auth
+├── lsa/                 # Next.js frontend application
+├── docker-compose.yml   # Local PostGIS + Redis services
+├── manage.py            # Django management script
+└── requirements.txt     # Python dependencies
 ```
 
 ---
 
-## 🚀 Tech Stack
+## 🛠️ Setup Guide
 
-### Backend
-- **Framework:** Django 6.0 + Django REST Framework (DRF)
-- **Database:** PostgreSQL + **PostGIS** (for Location-based services)
-- **Authentication:** SimpleJWT (JSON Web Tokens)
-- **Search & Analytics:** ELK Stack (Elasticsearch, Logstash, Kibana)
+### 1. Start local services
 
-### Frontend
-- **Framework:** Next.js 15+ (App Router)
-- **Styling:** Tailwind CSS + Shadcn UI
-- **State Management:** Redux Toolkit
-- **Maps:** React Leaflet & Google Maps API
-- **Forms:** Formik + Yup
-
-### DevOps & Infrastructure
-- **CI/CD:** Jenkins
-- **Containerization:** Docker & Docker Compose
-- **Environment Management:** Python-environ
-
----
-
-## ✨ Key Features
-
-- 🗺️ **Geospatial Search:** Find services near you using PostGIS.
-- 🔐 **Secure Auth:** JWT-based authentication with token rotation.
-- 📊 **Monitoring:** Integrated ELK stack for log analysis and data visualization.
-- ⚡ **Performance:** Optimized API with custom throttling and exception handling.
-- 📱 **Responsive UI:** Modern, mobile-first design using Next.js and Tailwind.
-
----
-
-## 🛠️ Installation & Setup
-
-### 1. Backend Setup
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd Local_Service_Finder
+cd /home/vscode/Local_Service_Finder
+docker-compose up -d
+```
 
-# Create and activate virtual environment
-python -m venv myenv
-source myenv/bin/activate  # On Windows: myenv\Scripts\activate
+### 2. Backend setup
 
-# Install dependencies (ensure you have libpq-dev and gdal-bin for PostGIS)
+```bash
+cd /home/vscode/Local_Service_Finder
+python -m venv myvenv
+source myvenv/bin/activate
 pip install -r requirements.txt
-
-# Configure environment variables
-cp .env.example .env  # Update .env with your DB credentials
-
-# Run migrations
 python manage.py migrate
-
-# Start server
 python manage.py runserver
 ```
 
-### 2. Frontend Setup
+### 3. Frontend setup
+
 ```bash
-cd lsa
+cd /home/vscode/Local_Service_Finder/lsa
 npm install
 npm run dev
 ```
 
-### 3. ELK Stack (Optional)
-```bash
-docker-compose up -d
-```
-- **Kibana:** http://localhost:5601
-- **Elasticsearch:** http://localhost:9200
+### 4. Open the app
+
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:8000`
 
 ---
 
-## 🛠 CI/CD
-This project uses **Jenkins** for automated builds and deployments. Refer to the `JENKINSFILE` for pipeline stages.
+## 📌 API Reference
+
+### Public Endpoints
+- `GET /api/public/`
+- `GET /api/public/<id>/`
+- `GET /api/public/<limit>/<skip>/`
+- `GET /api/public/search/nearby`
+
+### Admin Endpoints
+- `POST /api/login/`
+- `POST /api/service/create`
+- `PUT/PATCH /api/service/update/<pk>`
+- `DELETE /api/service/delete/<pk>`
 
 ---
 
-## 📝 License
-This project is licensed under the MIT License.
+## ⚠️ Notes
+
+- The frontend proxy configuration is defined in `lsa/next.config.ts`.
+- Admin-only backend actions require authenticated users with the `admin` role.
+- The backend uses spatial data types and is configured to work with PostGIS.
+
+---
+
+## 📄 License
+
+MIT License

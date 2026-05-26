@@ -6,6 +6,6 @@ const getBaseURL = () =>
 const api = axios.create({ baseURL: getBaseURL() });
 
 export async function getPublicServices() {
-  const { data } = await api.get("api/v1/public/", { withCredentials: true });
+  const { data } = await api.get("api/public/", { withCredentials: true });
   return data;
 }

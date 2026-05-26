@@ -9,8 +9,7 @@ from .serriialiiizers import UserSerializer
 from .utils import exception_handler
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework import viewsets
-
+from django.contrib.auth.hashers import check_password, make_password
 
 
 from rest_framework.permissions import AllowAny
@@ -33,11 +32,17 @@ class UserViewSet(viewsets.ModelViewSet):
                 except User.DoesNotExist:
                     return Response({"error": "User does not exist"}, status=status.HTTP_400_BAD_REQUEST)
                 
-                from django.contrib.auth.hashers import check_password
-                if check_password(password, user.password):
+                password_valid = check_password(password, user.password)
+                if not password_valid and user.password == password:
+                    # Legacy plaintext passwords may exist in the DB; rehash on first successful login.
+                    user.password = make_password(password)
+                    user.save(update_fields=['password'])
+                    password_valid = True
+
+                if password_valid:
                     refresh = RefreshToken.for_user(user)
                     access_token = str(refresh.access_token)
-                   
+                    
                     refresh_token = str(refresh)
                     print(refresh_token)
                     response = Response(
@@ -51,7 +56,7 @@ class UserViewSet(viewsets.ModelViewSet):
                     )
 
                     response.set_cookie(
-                        key='access_token',
+                        key='accessToken',
                         value=access_token,
                         httponly=True,
                         secure=False,
@@ -59,23 +64,14 @@ class UserViewSet(viewsets.ModelViewSet):
                     )
 
                     response.set_cookie(
-                        key='refresh_token',
+                        key='refreshToken',
                         value=refresh_token,
                         httponly=True,
                         secure=False,
                         samesite="Lax"
                     )
 
-
-                    return Response({
-                        "user": UserSerializer(user).data,
-                        "access": str(refresh.access_token),
-                        "refresh": str(refresh),
-                        "message": "Login successful"
-                    }, status=status.HTTP_200_OK)
-
-
-                
+                    return response
                 else:
                     return Response({"error": "Invalid password"}, status=status.HTTP_400_BAD_REQUEST)
             else:

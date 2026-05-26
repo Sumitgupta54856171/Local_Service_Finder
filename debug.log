@@ -2598,3 +2598,227 @@ ERROR 2026-02-25 04:09:34,687 log Internal Server Error: /api/service/update/124
 ERROR 2026-02-25 04:09:34,689 log "PUT /api/service/update/124 HTTP/1.1" 500 258
 ERROR 2026-02-25 04:17:18,411 log Internal Server Error: /api/service/delete/127
 ERROR 2026-02-25 04:17:18,412 log "DELETE /api/service/delete/127 HTTP/1.1" 500 192
+ERROR 2026-05-26 02:46:42,738 log Internal Server Error: /api/public/10/20/
+ERROR 2026-05-26 02:46:42,739 log "GET /api/public/10/20/ HTTP/1.1" 500 226
+ERROR 2026-05-26 02:46:58,814 log Internal Server Error: /api/public/10/20/
+ERROR 2026-05-26 02:46:58,815 log "GET /api/public/10/20/ HTTP/1.1" 500 226
+ERROR 2026-05-26 03:12:22,377 log Internal Server Error: /api/login/
+ERROR 2026-05-26 03:12:22,380 log "POST /api/login/ HTTP/1.1" 500 66
+ERROR 2026-05-26 03:12:31,372 log Internal Server Error: /api/login/
+ERROR 2026-05-26 03:12:31,373 log "POST /api/login/ HTTP/1.1" 500 66
+ERROR 2026-05-26 03:12:37,850 log Internal Server Error: /api/login/
+ERROR 2026-05-26 03:12:37,851 log "POST /api/login/ HTTP/1.1" 500 66
+ERROR 2026-05-26 03:13:03,129 log Internal Server Error: /api/login/
+ERROR 2026-05-26 03:13:03,130 log "POST /api/login/ HTTP/1.1" 500 66
+ERROR 2026-05-26 03:13:05,272 log Internal Server Error: /api/login/
+ERROR 2026-05-26 03:13:05,273 log "POST /api/login/ HTTP/1.1" 500 66
+ERROR 2026-05-26 03:18:53,462 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:18:53,465 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:18:57,905 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:18:57,912 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:19:08,366 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:19:08,371 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:19:42,585 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:19:42,587 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:19:45,275 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:19:45,280 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:19:45,509 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:19:45,511 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:19:45,703 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:19:45,705 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:19:46,169 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:19:46,173 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:21:21,643 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:21:21,645 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:21:23,344 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:21:23,347 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:21:24,257 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:21:24,259 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:21:24,941 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:21:24,943 log "POST /api/login HTTP/1.1" 500 21425
+ERROR 2026-05-26 03:21:29,987 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:21:29,991 log "POST /api/login HTTP/1.1" 500 77533
+ERROR 2026-05-26 03:21:45,943 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vscode/Local_Service_Finder/myvenv/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-05-26 03:21:45,946 log "POST /api/login HTTP/1.1" 500 21425

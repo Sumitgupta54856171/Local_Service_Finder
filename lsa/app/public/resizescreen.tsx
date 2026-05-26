@@ -23,35 +23,34 @@ export function ResizableHandleDemo() {
     const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
 useEffect(() => {
-     const controller = new AbortController(); 
-const fetchData = async () => {
-      try {
-        setLoading(true);
-        
-         const limit=10;
-         const skip=20 // API se data fetch karna
-        const response = await axios.get(`http://localhost:8000/api/public/${limit}/${skip}`, { withCredentials: true, signal: controller.signal });
+     const controller = new AbortController();
+     const fetchData = async () => {
+       try {
+         setLoading(true);
 
-        // If paginated, use response.results
-        if (response && Array.isArray(response.data.results)) {
-          setServices(response.data.results);
-        } else if (Array.isArray(response.data)) {
-          setServices(response.data);
-        } else {
-          setServices([]);
-        }
-      } catch (error) {
-        console.error("Public services fetch error:", error);
-        setServices([]);
-      } finally {
-        setLoading(false);
-      }
-    };
+         const limit = 10;
+         const skip = 0; // Start at first page
+         const response = await axios.get(`http://localhost:8000/api/public/${limit}/${skip}`, { withCredentials: true, signal: controller.signal });
 
-    fetchData();
+         if (response && Array.isArray(response.data.results)) {
+           setServices(response.data.results);
+         } else if (Array.isArray(response.data)) {
+           setServices(response.data);
+         } else {
+           setServices([]);
+         }
+       } catch (error) {
+         console.error("Public services fetch error:", error);
+         setServices([]);
+       } finally {
+         setLoading(false);
+       }
+     };
 
-    
-  }, []);
+     fetchData();
+
+     return () => controller.abort();
+   }, []);
 
   return (
     <div className="flex flex-col h-screen bg-slate-50">
